@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Oddpost Playground Bootstrap
  * Description: Opens Oddpost automatically inside the OpenStation Playground demo.
- * Version: 1.0.0
+ * Version: 1.1.0
  *
  * @package Oddpost_Playground
  */
@@ -22,14 +22,14 @@ add_action(
 
 	var attempts = 0;
 	var maxAttempts = 80;
-	var openedKey = 'oddpost-playground.opened.v1';
+	var openedKey = 'oddpost-playground.opened.v2';
 
 	function desktopApi() {
 		if (!window.wp) {
 			return null;
 		}
 
-		return window.wp.os || window.wp.desktop || null;
+		return window.wp.desktop || window.wp.os || null;
 	}
 
 	function openOddpost() {
