@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Oddpost Playground Bootstrap
- * Description: Opens Oddpost automatically inside the OpenStation Playground demo.
- * Version: 1.1.0
+ * Plugin Name: ODD Post Playground Bootstrap
+ * Description: Opens ODD Post automatically inside the OpenStation Playground demo.
+ * Version: 1.1.1
  *
  * @package Oddpost_Playground
  */
