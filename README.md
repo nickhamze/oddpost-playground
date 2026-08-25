@@ -21,5 +21,5 @@ Open the bundle with:
 ## Integrity
 
 - OpenStation package SHA-256: `0a14f7db5c98bdc0c140cfb81b1f4af902bd396a9b924cc2ae20fbc340c42894`
-- Oddpost package SHA-256: `816a01f91439dcbd6e95d50ff555d3f953a9becdaa5906c889342e432f6f49f9`
-- Playground bundle SHA-256: `c809a9e88858a5eda47cdffd2d24e328f76c81b384ea22c59be5ca9f96823616`
+- Oddpost package SHA-256: `da59fc08ac5d43f405b75e262e5b9a05b94282d0a139fc84bc375e0091c28e12`
+- Playground bundle SHA-256: `026901d39a01c1712afc0fc2cf362c1407c4667a2351f611b1c1c1bee2df6307`

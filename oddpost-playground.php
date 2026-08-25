@@ -22,18 +22,18 @@ add_action(
 
 	var attempts = 0;
 	var maxAttempts = 80;
-	var openedKey = 'oddpost-playground.opened.v3';
+	var openedKey = 'oddpost-playground.opened.v4';
 
 	function desktopApi() {
 		if (!window.wp) {
 			return null;
 		}
 
-		if (window.wp.desktop && typeof window.wp.desktop.openWindow === 'function') {
-			return window.wp.desktop;
+		if (window.wp.os && typeof window.wp.os.openWindow === 'function') {
+			return window.wp.os;
 		}
 
-		return window.wp.os || window.wp.desktop || null;
+		return window.wp.desktop || window.wp.os || null;
 	}
 
 	function openOddpost() {
