@@ -1,0 +1,54 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/openstation/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": false
+  },
+  "siteOptions": {
+    "blogname": "Oddpost"
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "bundled",
+        "path": "/openstation.zip"
+      },
+      "options": {
+        "activate": true,
+        "targetFolderName": "desktop-mode"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "bundled",
+        "path": "/oddpost.zip"
+      },
+      "options": {
+        "activate": true,
+        "targetFolderName": "oddpost"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/oddpost-playground.php",
+      "data": {
+        "resource": "bundled",
+        "path": "/oddpost-playground.php"
+      }
+    },
+    {
+      "step": "login",
+      "username": "admin"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once('/wordpress/wp-load.php'); $user = get_user_by('login', 'admin'); if ($user) { update_user_meta($user->ID, 'desktop_mode_mode', '1'); update_user_meta($user->ID, 'desktop_mode_seen_intros', array('activation-welcome')); } update_option('blogname', 'Oddpost');"
+    }
+  ]
+}
